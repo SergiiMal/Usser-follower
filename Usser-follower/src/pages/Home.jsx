@@ -17,15 +17,13 @@ import {
   StyledTweets,
 } from "../components/usersCard/UsersCard.styled";
 import { Link, useLocation } from "react-router-dom";
-import { updateUser } from "../components/apiService/apiService";
+import { updateUser } from "../components/Api/apiService";
 import logo from "../components/images/logo.png";
 import background from "../components/images/picture.png";
 
 const Home = () => {
   const location = useLocation();
   const [responseData, setResponseData] = useState();
-  console.log("responseData:", responseData);
-
   const [btnVision, setBtnVision] = useState(false);
   const [pageNum, setPageNum] = useState(2);
   const [isLoadingSpinner, setIsLoadingSpinner] = useState(false);
